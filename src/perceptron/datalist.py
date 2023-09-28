@@ -11,7 +11,17 @@ class DataList():
         self.data_list.append(DataSet(x, y))
 
     def dim(self):
-        dim=0
+        dim = 0
         if self.data_list:
-            dim=self.data_list[0].size()
+            dim = self.data_list[0].size()
         return dim
+
+    def __str__(self) -> str:
+        txt = ""
+        first = True
+        for item in self.data_list:
+            if first:
+                txt += ","
+                first = False
+            txt += item.__str__()
+        return txt

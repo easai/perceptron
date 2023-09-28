@@ -10,3 +10,9 @@ class DataSet():
 
     def size(self):
         return len(self.x)
+
+    def __str__(self) -> str:
+        return f"({self.x}, {self.y})"
+
+    def __repr__(self) -> str:
+        return f"<{self.x}, {self.y}>"
